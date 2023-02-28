@@ -24,7 +24,7 @@ const CreateAccountScreen = () => {
 
   const handleCreateAccount = () => {
     if (!name || !surname || !email || !phone || !password) {
-      Alert.alert('Hata', 'Please fill in all required fields.');
+      Alert.alert('Error', 'Please fill in all required fields.');
     } else {
       navigation.navigate('HomePageScreen');
     }
