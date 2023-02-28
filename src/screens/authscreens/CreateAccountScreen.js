@@ -3,7 +3,7 @@ import {TextInput, StyleSheet, View, Text, Alert} from 'react-native';
 import {Button} from 'react-native-elements';
 import {parameters} from '../../global/styles';
 
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 
 const CreateAccountScreen = () => {
   const [name, setName] = useState('');
@@ -14,11 +14,11 @@ const CreateAccountScreen = () => {
 
   const navigation = useNavigation();
 
-  const validateEmail = (text) => {
+  const validateEmail = text => {
     setEmail(text.replace(/[^a-zA-Z0-9@._-]/g, ''));
   };
 
-  const validatePhone = (text) => {
+  const validatePhone = text => {
     setPhone(text.replace(/[^0-9]/g, ''));
   };
 
@@ -49,7 +49,7 @@ const CreateAccountScreen = () => {
         style={styles.input}
         placeholder="Email"
         value={email}
-        onChangeText={(text) => validateEmail(text)}
+        onChangeText={text => validateEmail(text)}
         keyboardType="email-address"
       />
       <TextInput
